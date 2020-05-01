@@ -3,33 +3,40 @@
 // usuario puede desactivar JS y modificar el código del frontal.
 
 const validador = {
-    claveValida : function(clave) {
-        return clave == null ? false : clave.trim().length > 7;
+    validarClave : function(clave) {
+        return clave.trim().length>7;
     },
-    correoValido : function(correo) {
+    validarCorreo : function(correo) {
         const c = correo.trim();
-        if (c.trim().length<5) {
+        if (c.length<5) {
             return false;
         }
         return c.includes('@') && c.includes('.') &&
             ((c.lastIndexOf('.') - c.indexOf('@')) > 1);
     },
-    validar : function() {
+    validarCif : function(cif) {
+        const regexp = /[0-9]{6}[A-Fa-f]/;
+        return regexp.test(cif);
+    },
+    validarAcceso : function() {
         const clave  = document.getElementById("pcont");
         const correo = document.getElementById("pcorreo");
-        const correoValido = validador.correoValido(correo.value);
-        const claveValida = validador.claveValida(clave.value);
+        const esCorreoValido = validador.validarCorreo(correo.value);
+        const esClaveValida = validador.validarClave(clave.value);
 
-        if(!correoValido) {
+        if(!esCorreoValido) {
             correo.focus();
+            window.alert('Correo inválido.');
             return false;
-        } else if (!claveValida) {
+        } else if (!esClaveValida) {
             clave.focus();
+            window.alert('Clave inválida, debe ser mayor de 7 caracteres.');
             return false;
         }
-        document.getElementById('enviar').disabled=false;
+        window.alert("Indentificado correctamente.")
         return true;
+    },
+    validarPublicitarse : function {
+        return false;
     }
 }
-
-document.getElementById('acceso').addEventListener('keyup',validador.validar);
