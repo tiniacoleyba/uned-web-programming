@@ -1,0 +1,29 @@
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (idusuario,nombre,apellido,edad?,sexo?,telefono*,correo,
+clave,recuperacion,uso)>
+<!ELEMENT idusuario (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT sexo EMPTY>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT clave (#PCDATA)>
+<!ELEMENT recuperacion (pregunta,twofa)>
+<!ELEMENT pregunta (#PCDATA)>
+<!ELEMENT twofa EMPTY>
+<!ELEMENT uso (subscripcion,accesos,registro)>
+<!ELEMENT subscripcion EMPTY>
+<!ELEMENT accesos (#PCDATA)>
+<!ELEMENT registro (ano,mes,dia)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT dia (#PCDATA)>
+
+<!ATTLIST usuario uid ID #REQUIRED>
+<!ATTLIST sexo s (f|m) #REQUIRED>
+<!ATTLIST telefono tipo (movil|fijo|nulo) #REQUIRED>
+<!ATTLIST correo tipo (personal|laboral) "personal">
+<!ATTLIST pregunta tipo (animal|deporte|hermano|ciudad) #REQUIRED>
+<!ATTLIST twofa habilitado (0|1) "0">
+<!ATTLIST subscripcion tipo (ninguna|normal|premiun) #REQUIRED>

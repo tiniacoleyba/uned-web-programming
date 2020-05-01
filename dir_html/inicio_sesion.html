@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>The Uned Post - Acceso</title>
+        <link rel="icon" href="img/up_logo.png"/>
+		<meta name="description" content="The Uned Post - Acceder"/>
+		<meta name="keywords"
+            content="UNED, Post, post, uned, acceso, entrar, login, UNED"/>
+		<meta name="author" content="The Uned Post"/>
+        <meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="interactivo.js"></script>
+        <style>body {text-align:center;}</style>
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="index.html">The Uned Post</a></h1>
+            </header>
+            <form action="/acceder" target="_self" method="post">
+                <fieldset>
+                    <legend>Acceso:</legend><br/>
+
+                    <label for="pcorreo">Correo electrónico:</label><br/>
+    				<input type="email" id="pcorreo" autofocus autocomplete="on"
+                        maxlength="100" minlength="5" name="correo" required
+                        placeholder="sucorreo@su.dominio" size="30"/><br/><br/>
+
+                    <label for="pcont">Contraseña:</label><br/>
+                    <input type="password" id="pcont" name="pw" required
+                        maxlength="50" minlength="8" size="30"><br/><br/>
+
+                    <input  onsubmit="validator.validar()" type="submit"
+                        value="enviar"/><br/>
+                </fieldset>
+            </form>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!ELEMENT anunciantes (anunciante+)>
+<!ELEMENT anunciante (idanunciante,empresa,cif,correo+,anuncios)>
+<!ELEMENT idanunciante (#PCDATA)>
+<!ELEMENT empresa (#PCDATA)>
+<!ELEMENT cif (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT anuncios (total,activos,anuncio+)>
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT activos (#PCDATA)>
+<!ELEMENT anuncio (posicion,modo,fecha,(texto|imagen))>
+<!ELEMENT posicion EMPTY>
+<!ELEMENT modo EMPTY>
+<!ELEMENT fecha (ano,mes,dia)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT texto (mensaje)>
+<!ELEMENT mensaje (#PCDATA)>
+<!ELEMENT imagen (fuente,tamano)>
+<!ELEMENT fuente (#PCDATA)>
+<!ELEMENT tamano EMPTY>
+
+<!ATTLIST anunciante aid ID #REQUIRED>
+<!ATTLIST anuncio activo (0|1) #REQUIRED idan ID #REQUIRED>
+<!ATTLIST posicion tipo (laterales|cabecera|incrustado) #REQUIRED>
+<!ATTLIST modo tipo (simple|pop-up) #REQUIRED>
+<!ATTLIST tamano tipo (peq|mediano|grande) #REQUIRED>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE anunciantes SYSTEM "anunciantes.dtd">
+<anunciantes>
+    <anunciante aid="x002B">
+        <idanunciante>mooglex002b</idanunciante>
+        <empresa>Moogle</empresa>
+        <cif>123456789X</cif>
+        <correo>mooglemarketing@moogle.com</correo>
+        <correo>servicio@moogle.com</correo>
+        <anuncios>
+            <total>2</total>
+            <activos>1</activos>
+            <anuncio activo="1" idan="x021">
+                <posicion tipo="laterales"/>
+                <modo tipo="simple"/>
+                <fecha>
+                    <ano>2020</ano>
+                    <mes>02</mes>
+                    <dia>04</dia>
+                </fecha>
+                <texto>
+                    <mensaje>Tenga toda su información en venta a terceros! Oferta
+                        ahora solo por 899&nbsp;&euro; antes 1321&nbsp;&euro; con
+                        el nuevo trollsphone99.
+                    </mensaje>
+                </texto>
+            </anuncio>
+            <anuncio activo="0" idan="x004">
+                <posicion tipo="cabecera"/>
+                <modo tipo="pop-up"/>
+                <fecha>
+                    <ano>2019</ano>
+                    <mes>07</mes>
+                    <dia>27</dia>
+                </fecha>
+                <imagen>
+                    <fuente>moogle-terceros.svg</fuente>
+                    <tamano tipo="mediano"/>
+                </imagen>
+            </anuncio>
+        </anuncios>
+    </anunciante>
+    <anunciante aid="x0009">
+        <idanunciante>bastidonx0009</idanunciante>
+        <empresa>Bastidon</empresa>
+        <cif>323456789A</cif>
+        <correo>marketing@bastidon.net</correo>
+        <anuncios>
+            <total>1</total>
+            <activos>1</activos>
+            <anuncio activo="1" idan="x0FF">
+                <posicion tipo="incrustado"/>
+                <modo tipo="simple"/>
+                <fecha>
+                    <ano>2020</ano>
+                    <mes>03</mes>
+                    <dia>05</dia>
+                </fecha>
+                <imagen>
+                    <fuente>batidon-oferta.jpeg</fuente>
+                    <tamano tipo="peq"/>
+                </imagen>
+            </anuncio>
+        </anuncios>
+    </anunciante>
+</anunciantes>

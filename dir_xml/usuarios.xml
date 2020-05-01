@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE usuarios SYSTEM "usuarios.dtd">
+<usuarios>
+    <usuario uid="x000A">
+        <idusuario>josemhg</idusuario>
+        <nombre>José María</nombre>
+        <apellido>Hernández González</apellido>
+        <edad>43</edad>
+        <sexo s="m"/>
+        <telefono tipo="movil">666123999</telefono>
+        <correo tipo="personal">josemhg@gmail.com</correo>
+        <clave>josemgH19770911;</clave>
+        <recuperacion>
+            <pregunta tipo="deporte">salto-base</pregunta>
+            <twofa habilitado="1"/>
+        </recuperacion>
+        <uso>
+            <subscripcion tipo="premiun"/>
+            <accesos>731</accesos>
+            <registro>
+                <ano>2016</ano>
+                <mes>7</mes>
+                <dia>30</dia>
+            </registro>
+        </uso>
+    </usuario>
+    <usuario uid="x001F">
+        <idusuario>victoriacg</idusuario>
+        <nombre>Victoria</nombre>
+        <apellido>Contrera García</apellido>
+        <edad></edad>
+        <sexo s="f"/>
+        <telefono tipo="nulo"></telefono>
+        <correo tipo="personal">victoriacg@yandex.com</correo>
+        <clave>vIctoriacg44;</clave>
+        <recuperacion>
+            <pregunta tipo="animal">Koala</pregunta>
+            <twofa habilitado="0"/>
+        </recuperacion>
+        <uso>
+            <subscripcion tipo="normal"/>
+            <accesos>33</accesos>
+            <registro>
+                <ano>2019</ano>
+                <mes>11</mes>
+                <dia>17</dia>
+            </registro>
+        </uso>
+    </usuario>
+</usuarios>
