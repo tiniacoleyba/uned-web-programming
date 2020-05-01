@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>The Uned Post - Publicitarse</title>
+        <link rel="icon" href="img/up_logo.png"/>
+		<meta name="description" content="The Uned Post - Publicitarse"/>
+		<meta name="keywords" content="UNED, Post, post, uned, publicidad,
+            publicitarse, ads, anuncio, anunciarse"/>
+		<meta name="author" content="The Uned Post"/>
+        <meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            #textareaid {width:300px;height:200px;}
+            .button {width:100px;}
+            body {text-align:center;}
+        </style>
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1>The Uned Post</h1>
+                <h2>Publicitarse</h2>
+            </header>
+            <p>Si desea publicitarse, rellene y envie el formulario sobre las
+                características del anuncio. Se le responderá en un plazo hábil
+                de <strong>tres días laborales.</strong></p>
+            <form action="/publicidad" target="_self" method="post">
+                <fieldset>
+                    <legend>Publicitarse:</legend>
+
+                    <label for="enombre">Nombre de la empresa:</label><br/>
+                    <input type="text" id="enombre" name="enombre"
+                        maxlength="100" required autofocus />
+                    <br/><br/>
+
+                    <label for="ecif">CIF:</label><br/>
+                    <input type="text" id="ecif" name="cif" required
+                        pattern="[0-9]{6}[A-Fa-f]" placeholder="123456K"/>
+                    <br><br>
+
+                    <label for="ecorreo">Correo electrónico:</label><br>
+    				<input type="email" id="ecorreo" name="ecorreo" required
+                        maxlength="100" placeholder="su@empresa.com"/><br/><br/>
+
+                    <label>Tipo:</label>
+                    <input type="radio" id="tanuncio_t" name="tanuncio"
+                        value="texto"/>
+    				<label for="tanuncio_t">Texto</label>
+    				<input type="radio" id="tanuncio_i" name="tanuncio"
+                        value="imagen"/>
+    				<label for="tanuncio_i">Imagen</label><br><br>
+
+                    <label>Modo:</label>
+                    <input type="radio" id="manuncio_s" name="modoanunc"
+                        value="simple">
+                    <label for="manuncio_s">Simple</label>
+                    <input type="radio" id="manuncio_p" name="modoanunc"
+                        value="popup">
+                    <label for="manuncio_p">Pop-up</label><br><br>
+
+                    <label for="aposicionid">Posición:</label><br/>
+    				<select id="aposicionid" name="aposicion" size="1">
+    					<option value="laterales">laterales</option>
+    					<option value="cabecera">cabecera</option>
+    					<option value="incrustado">incrustado</option>
+    				</select><br/><br/>
+
+                    <label for="textareaid">Mensaje del anuncio:</label><br/>
+                    <textarea name="message" id="textareaid" maxlength="140"></textarea>
+                    <br/><br/>
+
+                    <label for="imgtam">Tamaño de la imagen:</label><br/>
+                    <select id="imgtam" name="imgtam" size="1">
+                        <option value="peq" selected>Pequeña &lt;(100px,100px)</option>
+                        <option value="med">Mediana &lt;(300px,300px)</option>
+                        <option value="grande">Grande &gt;(300px,300px)</option>
+                    </select><br/><br/>
+
+                    <input type="button" class="button" onclick=""
+                        value="Información"><br/><br/>
+                    <input type="button" class="button" onclick=""
+                        value="Calcular"><br/><br/>
+                    <input type="submit" class="button" value="Enviar"/><br>
+                </fieldset>
+            </form>
+
+            <!--
+                <p>? <strong>?</strong>? <a href="../principal.html"
+                target="_blank">?</a> ?.</p>
+            -->
+        </section>
+        <script src="interactivo.js"></script>
+    </body>
+</html>
