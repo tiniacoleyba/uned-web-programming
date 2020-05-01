@@ -24,7 +24,8 @@
             <p>Si desea publicitarse, rellene y envie el formulario sobre las
                 características del anuncio. Se le responderá en un plazo hábil
                 de <strong>tres días laborales.</strong></p>
-            <form action="/publicidad" target="_self" method="post">
+            <form action="index.html" target="_self" method="post"
+                onsubmit="return validador.validarPublicitarse();">
                 <fieldset>
                     <legend>Publicitarse:</legend>
 
@@ -35,7 +36,7 @@
 
                     <label for="ecif">CIF:</label><br/>
                     <input type="text" id="ecif" name="cif" required
-                        pattern="[0-9]{6}[A-Fa-f]" placeholder="123456K"/>
+                        pattern="[0-9]{6}[a-zA-Z]" placeholder="123456K"/>
                     <br><br>
 
                     <label for="ecorreo">Correo electrónico:</label><br>
@@ -60,6 +61,7 @@
 
                     <label for="aposicionid">Posición:</label><br/>
     				<select id="aposicionid" name="aposicion" size="1">
+                        <option value=""></option>
     					<option value="laterales">laterales</option>
     					<option value="cabecera">cabecera</option>
     					<option value="incrustado">incrustado</option>
@@ -71,7 +73,8 @@
 
                     <label for="imgtam">Tamaño de la imagen:</label><br/>
                     <select id="imgtam" name="imgtam" size="1">
-                        <option value="peq" selected>Pequeña &lt;(100px,100px)</option>
+                        <option value=""></option>
+                        <option value="peq">Pequeña &lt;(100px,100px)</option>
                         <option value="med">Mediana &lt;(300px,300px)</option>
                         <option value="grande">Grande &gt;(300px,300px)</option>
                     </select><br/><br/>
