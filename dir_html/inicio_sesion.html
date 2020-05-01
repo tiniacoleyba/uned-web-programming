@@ -9,7 +9,6 @@
 		<meta name="author" content="The Uned Post"/>
         <meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script src="interactivo.js"></script>
         <style>body {text-align:center;}</style>
     </head>
     <body>
@@ -17,23 +16,23 @@
             <header>
                 <h1><a href="index.html">The Uned Post</a></h1>
             </header>
-            <form action="/acceder" target="_self" method="post">
+            <form action="index.html" id="acceso" target="_self" method="post"
+                onsubmit="return validador.validarAcceso();">
                 <fieldset>
                     <legend>Acceso:</legend><br/>
-
                     <label for="pcorreo">Correo electrónico:</label><br/>
     				<input type="email" id="pcorreo" autofocus autocomplete="on"
                         maxlength="100" minlength="5" name="correo" required
                         placeholder="sucorreo@su.dominio" size="30"/><br/><br/>
-
                     <label for="pcont">Contraseña:</label><br/>
-                    <input type="password" id="pcont" name="pw" required
-                        maxlength="50" minlength="8" size="30"><br/><br/>
-
-                    <input  onsubmit="validator.validar()" type="submit"
-                        value="enviar"/><br/>
+                    <input type="password" id="pcont" name="pw" size="30">
+                    <br/><br/>
+                    <!-- minlength="8" maxlength="50"><br/><br/> -->
+                    <input type="submit" id="enviar" value="enviar"/>
+                    <br/>
                 </fieldset>
             </form>
         </section>
+        <script src="interactivo.js"></script>
     </body>
 </html>
