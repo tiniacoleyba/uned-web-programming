@@ -36,7 +36,7 @@ const validador = {
         window.alert("Indentificado correctamente.")
         return true;
     },
-    validarPublicitarse : function {
+    validarPublicitarse : function() {
         return false;
     }
 }
