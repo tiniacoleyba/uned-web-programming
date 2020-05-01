@@ -1,8 +1,6 @@
 Trabajando:
-    - Página principal del periodico.
+	- Código de validación de JS.
     - Página de noticia.
-    - Código de validación de JS.
-    - Página de notica.
     - Incluir iframe.
     - Incluir etiquetas para dar formato al texto.
 
@@ -11,3 +9,4 @@ Acabado:
     - El HTML de formulario para publicitarse.
     - El HTML del formulario de registro.
     - Módulo XML y DTD.
+	- Página principal del periodico básica.
