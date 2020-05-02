@@ -1,5 +1,4 @@
 Trabajando:
-- Validación de JS formulario de registro.
 - Página de noticia.
 - Incluir iframe.
 - Incluir etiquetas para dar formato al texto.
@@ -19,3 +18,4 @@ Acabado:
 - Página principal del periodico básica.
 - Validacion JS del formulario de inicio de sesión.
 - Validacion JS del formulario de publicidad.
+- Validación de JS formulario de registro.
