@@ -1,6 +1,8 @@
 const Validador = {
     formatoClave : "La contraseña debe tener como mínimo 8 caracteres y" +
         "contener una mayúscula y un número.",
+    formatoFecha : "El formato de fecha debe ser dd/mm/aaaa y usted debe" +
+        "ser mayor de edad.",
     validarClave : function(clave) {
         // TODO: implementar comprobacion de formato
         return clave.trim().length>7;
@@ -51,7 +53,7 @@ const Validador = {
         const imgtam    = document.getElementById("imgtam");
         const textarea  = document.getElementById("textareaid");
         const tiposAnuncio = ["tanuncio_t","tanuncio_i"];
-        const modoAnuncio = ["manuncio_s","manuncio_p"];
+        const modoAnuncio  = ["manuncio_s","manuncio_p"];
         const tipoSelec = Validador.validarBotonesRadio(tiposAnuncio);
         const modoSelec = Validador.validarBotonesRadio(modoAnuncio);
 
@@ -90,8 +92,14 @@ const Validador = {
         return true;
     },
     validarfechaNac : function(fechaNac) {
-        // TODO: implementar comprobación
-        return true;
+        const [dia,mes,ano] = fechaNac.split('/').map(s=>Number(s));
+        const fecha = new Date(ano,mes-1,dia);
+        if(dia != fecha.getDate() || (mes-1) != fecha.getMonth() ||
+                ano != fecha.getFullYear()) {
+            return false;
+        }
+        fecha.setYear(fecha.getFullYear() + 18);
+        return fecha < new Date();
     },
     validarRegistro : function() {
         const nombre      = document.getElementById("nombre");
@@ -114,7 +122,7 @@ const Validador = {
             return false;
         }else if(!Validador.validarfechaNac(fechaNac.value)){
             fechaNac.focus();
-            window.alert('El formato de fecha debe ser dd/mm/aaaa.');
+            window.alert(Validador.formatoFecha);
             return false;
         }else if(Validador.validarBotonesRadio(sexo) == ""){
             window.alert('Debe elegir su género.');
