@@ -1,11 +1,11 @@
 const Validador = {
-    formatoClave : "La contraseña debe tener como mínimo 8 caracteres y" +
+    formatoClave : "La contraseña debe tener como mínimo 8 caracteres y " +
         "contener una mayúscula y un número.",
-    formatoFecha : "El formato de fecha debe ser dd/mm/aaaa y usted debe" +
+    formatoFecha : "El formato de fecha debe ser dd/mm/aaaa y usted debe " +
         "ser mayor de edad.",
     validarClave : function(clave) {
-        // TODO: implementar comprobacion de formato
-        return clave.trim().length>7;
+        return clave.trim().length > 7 ?
+            (/.*[A-Z].*/.test(clave) && /.*[0-9].*/.test(clave)): false;
     },
     validarCorreo : function(correo) {
         const c = correo.trim();
