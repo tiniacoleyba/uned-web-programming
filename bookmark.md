@@ -2,8 +2,8 @@ Trabajando:
 - Página de noticia.
 - Incluir iframe.
 - Incluir etiquetas para dar formato al texto.
-- Fichero de configuración del servidor apache.
 - Cambiar texto noticias.
+- Trabajo complementario.
 
 Opcional:
 - Informacion en formulario de publicidad.
@@ -19,3 +19,5 @@ Acabado:
 - Validacion JS del formulario de inicio de sesión.
 - Validacion JS del formulario de publicidad.
 - Validación de JS formulario de registro.
+- Fichero de configuración del servidor apache.
+- Comprobación de formato de contraseña.
