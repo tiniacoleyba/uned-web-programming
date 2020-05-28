@@ -1,8 +1,7 @@
 Trabajando:
-- Página de noticia.
-- Incluir iframe.
 - Incluir etiquetas para dar formato al texto.
 - Cambiar texto noticias.
+- Añadir cálculo precio del anuncio.
 - Trabajo complementario.
 
 Opcional:
@@ -21,3 +20,6 @@ Acabado:
 - Validación de JS formulario de registro.
 - Fichero de configuración del servidor apache.
 - Comprobación de formato de contraseña.
+- Incluir iframe.
+- Página de noticia.
+- Enviar datos de registro y publicidad por correo.
