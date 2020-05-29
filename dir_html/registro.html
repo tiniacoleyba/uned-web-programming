@@ -16,7 +16,9 @@
                 <h1>The Uned Post</h1>
                 <h2>Registro</h2>
             </header>
-            <form action="/registro" target="_self" method="post">
+            <form action="mailto:mimail@alumno.uned.es" target="_blank"
+                onsubmit="return Validador.validarRegistro();"
+                enctype="text/plain" method="post">
                 <fieldset>
                     <legend>Registrarse:</legend>
 
@@ -28,8 +30,9 @@
                         maxlength="50" required/><br/><br/>
 
                     <label for="fechanac">Fecha de nacimiento:</label><br/>
-                    <input type="date" id="fechanac" name="fechanac"
-                        min='1900-01-01' max='2002-01-01'/><br/><br/>
+                    <input type="text" id="fechanac" name="fechanac"
+                        placeholder="dd/mm/aaaa" required
+                        pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"/><br/><br/>
 
                     <label>Sexo:</label>
                     <input type="radio" id="sfemenino" name="sexo" value="f"/>
@@ -37,8 +40,8 @@
                     <input type="radio" id="smasculino" name="sexo" value="m"/>
                     <label for="smasculino">Masculino</label><br><br>
 
-                    <label for="pcorreo">Correo electr&oacute;nico:</label><br>
-    				<input type="email" id="pcorreo" name="correo" required
+                    <label for="correo">Correo electr&oacute;nico:</label><br>
+    				<input type="email" id="correo" name="correo" required
                         maxlength="50" placeholder="sucorreo@dominio.com">
                     <br/><br/>
 
@@ -48,6 +51,7 @@
 
                     <label for="prec">Pregunta de recuperaci&oacute;n:</label>
     				<br/><select id="prec" name="precuperacion" size="1">
+                        <option value="" label="nulo"></option>
     					<option value="animal">&iquest;Cu&aacute;l es tu animal
                             favorito&quest;</option>
     					<option value="deporte">&iquest;Cu&aacute;l es tu
@@ -58,11 +62,13 @@
                             de tu ciudad de nacimiento&quest;</option>
     				</select><br/>
 
-                    <input type="text" required maxlength="20"/><br/><br/>
+                    <input type="text" id="rrec" required maxlength="20"/>
+                    <br/><br/>
 
                     <input type="submit" class="button" value="Registrar"/><br>
                 </fieldset>
             </form>
+            <script src="interactivo.js"></script>
         </section>
     </body>
 </html>
