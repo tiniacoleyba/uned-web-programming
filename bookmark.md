@@ -1,8 +1,6 @@
 Trabajando:
-- Incluir etiquetas para dar formato al texto.
-- Cambiar texto noticias.
-- Añadir cálculo precio del anuncio.
 - Trabajo complementario.
+- Añadir cálculo precio del anuncio. (Esperando respuesta para ver si es opcional)
 
 Opcional:
 - Informacion en formulario de publicidad.
@@ -23,3 +21,5 @@ Acabado:
 - Incluir iframe.
 - Página de noticia.
 - Enviar datos de registro y publicidad por correo.
+- Cambiar texto noticias.
+- Incluir etiquetas para dar formato al texto.
