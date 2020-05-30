@@ -13,6 +13,10 @@
             #textareaid {width:300px;height:200px;}
             .button {width:100px;}
             body {text-align:center;}
+            #precios {
+                display:none;
+                margin: 0 auto;
+            }
         </style>
     </head>
     <body>
@@ -80,18 +84,40 @@
                         <option value="grande">Grande &gt;(300px,300px)</option>
                     </select><br/><br/>
 
-                    <input type="button" class="button" onclick=""
-                        value="Información"><br/><br/>
+                    <input type="button" class="button" value="Información"
+                        onclick="Informacion.mostrarPrecios();"><br/><br/>
+
                     <input type="button" class="button" onclick=""
                         value="Calcular"><br/><br/>
                     <input type="submit" class="button" value="Enviar"/><br>
                 </fieldset>
             </form>
 
-            <!--
-                <p>? <strong>?</strong>? <a href="../principal.html"
-                target="_blank">?</a> ?.</p>
-            -->
+            <div id="precios"><p>Los costes son aditivos según las
+            opciones seleccionadas y se expresan en euros.</p>
+            <ul style="display:table;margin: 0 auto;text-align:left">
+                <li>Texto: <span id="ptexto"><span></li>
+                <li>Imagen: <span id="pimagen"><span></li>
+                <li>Simple: <span id="psimple"><span></li>
+                <li>Popup: <span id="popup"><span></li>
+                <li>Posición:
+                    <ul>
+                        <li>Laterales: <span id="platerales"></span></li>
+                        <li>Cabecera: <span id="pcabecera"></span></li>
+                        <li>Incrustado: <span id="pincrustado"></span></li>
+                    </ul>
+                </li>
+                <li>Tamaño:
+                    <ul>
+                        <li>Pequeña: <span id="ppequena"></span></li>
+                        <li>Mediana: <span id="pmediana"></span></li>
+                        <li>Grande: <span id="pgrande"></span></li>
+                    </ul>
+                </li>
+                <li>Tarifa por letra en texto:<span id="pletra"><span></li>
+            </ul>
+            </div>
+
         </section>
         <script src="interactivo.js"></script>
     </body>
