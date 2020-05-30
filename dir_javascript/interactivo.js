@@ -147,3 +147,44 @@ const Validador = {
         return true;
     }
 };
+
+const Informacion = {
+    precios : {
+        texto:500,
+        imagen:300,
+        simple:100,
+        popup:200,
+        posicion:{
+            laterales:100,
+            cabecera:200,
+            incrustado:300
+        },
+        tamano:{
+            pequena:100,
+            mediana:250,
+            grande:500
+        },
+        letras:10
+    },
+    mostrarPrecios : function() {
+        document.getElementById('ptexto').innerHTML = this.precios.texto;
+        document.getElementById('pimagen').innerHTML = this.precios.imagen;
+        document.getElementById('psimple').innerHTML = this.precios.simple;
+        document.getElementById('popup').innerHTML = this.precios.popup;
+        document.getElementById('platerales').innerHTML =
+            this.precios.posicion.laterales;
+        document.getElementById('pcabecera').innerHTML =
+            this.precios.posicion.cabecera;
+        document.getElementById('pincrustado').innerHTML =
+            this.precios.posicion.incrustado;
+        document.getElementById('ppequena').innerHTML =
+            this.precios.tamano.pequena;
+        document.getElementById('pmediana').innerHTML =
+            this.precios.tamano.mediana;
+        document.getElementById('pgrande').innerHTML =
+            this.precios.tamano.grande;
+        document.getElementById('pletra').innerHTML = this.precios.letras;
+
+        document.getElementById('precios').style.display = "block";
+    }
+};
