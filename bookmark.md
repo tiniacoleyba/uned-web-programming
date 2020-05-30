@@ -1,6 +1,4 @@
 Trabajando:
-- Trabajo complementario.
-- Añadir cálculo precio del anuncio. (Esperando respuesta para ver si es opcional)
 
 Opcional:
 - Informacion en formulario de publicidad.
@@ -23,3 +21,5 @@ Acabado:
 - Enviar datos de registro y publicidad por correo.
 - Cambiar texto noticias.
 - Incluir etiquetas para dar formato al texto.
+- Añadir cálculo precio del anuncio. (Es obligatorio)
+- Trabajo complementario.
